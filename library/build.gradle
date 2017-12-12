@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+
+    api rootProject.ext.dependencies["rxlifecycle"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["rxbinding"]
+    api rootProject.ext.dependencies["rxbinding-support-v4"]
+    api rootProject.ext.dependencies["rxbinding-appcompat-v7"]
+    api rootProject.ext.dependencies["rxbinding-design"]
+    api rootProject.ext.dependencies["rxbinding-recyclerview-v7"]
+
+    api rootProject.ext.dependencies["butterknife"]
+    api rootProject.ext.dependencies["butterknife-compiler"]
+
+    api rootProject.ext.dependencies["retrofit2"]
+    api rootProject.ext.dependencies["adapter-rxjava"]
+    api rootProject.ext.dependencies["retrofit2-converter-gson"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["okhttp3-logging-interceptor"]
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
