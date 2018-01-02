@@ -9,6 +9,7 @@ package me.uplan.stillcoder.library.model.http.configuration;
 
 public class ApiConfiguration {
     private String baseUrl;
+    private String cachePath;
 
     public static Builder builder() {
         return new Builder();
@@ -16,6 +17,10 @@ public class ApiConfiguration {
 
     public String getBaseUrl() {
         return baseUrl;
+    }
+
+    public String getCachePath() {
+        return cachePath;
     }
 
     private ApiConfiguration(Builder builder) {
@@ -28,12 +33,18 @@ public class ApiConfiguration {
 
     public static final class Builder {
         private String baseUrl;
+        private String cachePath;
 
         private Builder() {
         }
 
         public Builder baseUrl(String baseUrl) {
             this.baseUrl = baseUrl;
+            return this;
+        }
+
+        public Builder cachePath(String cachePath) {
+            this.cachePath = cachePath;
             return this;
         }
 

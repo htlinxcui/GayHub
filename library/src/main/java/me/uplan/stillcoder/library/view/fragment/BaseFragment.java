@@ -15,7 +15,7 @@ import java.util.Set;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import me.uplan.stillcoder.library.presenter.IPresenter;
+import me.uplan.stillcoder.library.presenter.IPresenterLifeCycle;
 
 /**
  * @descript:Fragment基类，继承自RxFragment，以完成生命周期绑定
@@ -29,14 +29,14 @@ public abstract class BaseFragment extends RxFragment {
     /**
      * presenter集合
      */
-    private Set<IPresenter> presenters = new HashSet<>();
+    private Set<IPresenterLifeCycle> presenters = new HashSet<>();
     private Unbinder unbinder;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        IPresenter[] presenterArr = gatherPresenters();
+        IPresenterLifeCycle[] presenterArr = gatherPresenters();
         if (null == presenterArr) {
             return;
         }
@@ -95,7 +95,7 @@ public abstract class BaseFragment extends RxFragment {
      *
      * @return presenter集合
      */
-    protected abstract IPresenter[] gatherPresenters();
+    protected abstract IPresenterLifeCycle[] gatherPresenters();
 
     /**
      * 将fragment的生命周期与presenter的生命周期关联
@@ -107,7 +107,7 @@ public abstract class BaseFragment extends RxFragment {
             return;
         }
 
-        for (IPresenter presenter : presenters) {
+        for (IPresenterLifeCycle presenter : presenters) {
             if (null == presenter) {
                 continue;
             }

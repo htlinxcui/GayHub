@@ -1,5 +1,7 @@
 package me.uplan.stillcoder.library.model.http;
 
+import android.support.annotation.NonNull;
+
 import com.trello.rxlifecycle2.internal.Preconditions;
 
 import me.uplan.stillcoder.library.BuildConfig;
@@ -7,7 +9,7 @@ import me.uplan.stillcoder.library.model.http.configuration.ApiConfiguration;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -17,19 +19,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @todoDescript:
  */
 
-public class ApiClientSingleton {
+public class ApiSingleton {
     private Retrofit retrofit;
     private ApiConfiguration configuration;
 
-    private ApiClientSingleton() {
+    private ApiSingleton() {
 
     }
 
-    public static final ApiClientSingleton getInstance() {
+    public static final ApiSingleton getInstance() {
         return SingletonHolder.singleton;
     }
 
-    public synchronized void init(ApiConfiguration apiConfiguration) {
+    public synchronized void init(@NonNull ApiConfiguration apiConfiguration) {
         Preconditions.checkNotNull(apiConfiguration, "configuration==null");
         if (null != retrofit) {
             return;
@@ -45,8 +47,7 @@ public class ApiClientSingleton {
         }
 
         OkHttpClient client = builder.build();
-
-        retrofit = new Retrofit.Builder().baseUrl(configuration.getBaseUrl()).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJavaCallAdapterFactory.create()).client(client).build();
+        retrofit = new Retrofit.Builder().baseUrl(configuration.getBaseUrl()).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJava2CallAdapterFactory.create()).client(client).build();
     }
 
     public <T> T createService(Class<T> clazz) {
@@ -54,6 +55,6 @@ public class ApiClientSingleton {
     }
 
     private static class SingletonHolder {
-        private static final ApiClientSingleton singleton = new ApiClientSingleton();
+        private static final ApiSingleton singleton = new ApiSingleton();
     }
 }

@@ -6,7 +6,7 @@ package me.uplan.stillcoder.library.presenter;
  * @date:2017/12/12
  * @todoDescript:
  */
-public interface IPresenter {
+public interface IPresenterLifeCycle {
 
     void onCreate();
 

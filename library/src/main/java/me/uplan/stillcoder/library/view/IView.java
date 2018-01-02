@@ -1,6 +1,6 @@
 package me.uplan.stillcoder.library.view;
 
-import me.uplan.stillcoder.library.presenter.IPresenter;
+import me.uplan.stillcoder.library.presenter.IPresenterLifeCycle;
 
 /**
  * @descript:MVP模式中View的基类接口
@@ -8,11 +8,6 @@ import me.uplan.stillcoder.library.presenter.IPresenter;
  * @date:2017/12/12
  * @todoDescript:
  */
-public interface IView<P extends IPresenter> {
+public interface IView {
 
-    /**
-     * 设置对应的presenter
-     * @param presenter 对象
-     */
-    void setPresenter(P presenter);
 }

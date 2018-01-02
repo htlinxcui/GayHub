@@ -39,7 +39,12 @@ dependencies {
     implementation rootProject.ext.dependencies["support-v4"]
     implementation rootProject.ext.dependencies["appcompat-v7"]
 
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["recyclerview"]
+    api rootProject.ext.dependencies["cardview"]
+
     api rootProject.ext.dependencies["rxlifecycle"]
+    api rootProject.ext.dependencies["rxjava"]
     api rootProject.ext.dependencies["rxandroid"]
     api rootProject.ext.dependencies["rxbinding"]
     api rootProject.ext.dependencies["rxbinding-support-v4"]
@@ -48,7 +53,6 @@ dependencies {
     api rootProject.ext.dependencies["rxbinding-recyclerview-v7"]
 
     api rootProject.ext.dependencies["butterknife"]
-    api rootProject.ext.dependencies["butterknife-compiler"]
 
     api rootProject.ext.dependencies["retrofit2"]
     api rootProject.ext.dependencies["adapter-rxjava"]
