@@ -12,9 +12,9 @@ import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import me.uplan.stillcoder.library.model.http.function.ErrorAdaptFunction;
-import me.uplan.stillcoder.library.model.http.function.NegotiatedHandleFunction;
-import me.uplan.stillcoder.library.model.http.observer.BaseObserver;
+import me.uplan.stillcoder.library.rx.function.ErrorAdaptFunction;
+import me.uplan.stillcoder.library.rx.function.NegotiatedHandleFunction;
+import me.uplan.stillcoder.library.rx.observer.BaseObserver;
 
 /**
  * @descript:异步事件流工具类

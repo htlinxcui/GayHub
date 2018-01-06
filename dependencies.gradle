@@ -13,7 +13,7 @@ ext {
     android = [
             compileSdkVersion: 26,
             buildToolsVersion: "27.0.1",
-            applicatioId     : "me.uplan.stillcoder.pureweather",
+            applicatioId     : "me.uplan.stillcoder.gayhub",
             minSdkVersion    : 15,
             targetSdkVersion : 26,
             versionCode      : 1,

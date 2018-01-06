@@ -8,7 +8,7 @@ import com.trello.rxlifecycle2.internal.Preconditions;
 
 import java.lang.ref.WeakReference;
 
-import me.uplan.stillcoder.library.view.IView;
+import me.uplan.stillcoder.library.ui.IView;
 
 /**
  * @descript:IPresenter接口的空实现，所有Presenter务必继承该类。该类持有view的弱引用，避免内存泄漏。
