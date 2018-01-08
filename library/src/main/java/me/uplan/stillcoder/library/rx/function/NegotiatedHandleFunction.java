@@ -18,7 +18,7 @@ public class NegotiatedHandleFunction<T> implements Function<BaseHttpResponse<T>
     @Override
     public T apply(@NonNull BaseHttpResponse<T> response) throws Exception {
         if (!response.isSuccess()) {
-            throw new NegotiatedException(response.getCode(), response.getMsg());
+            throw new NegotiatedException(response.getCode(), response.getMessage());
         }
 
         return response.getData();

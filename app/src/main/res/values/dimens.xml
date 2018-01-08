@@ -2,4 +2,18 @@
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_56">56dp</dimen>
+    <dimen name="dimen_64">64dp</dimen>
+    <dimen name="dimen_0">0dp</dimen>
+    
+    <dimen name="dimen_text_hint">12sp</dimen>
+    <dimen name="dimen_text_mainbody">14sp</dimen>
+    <dimen name="dimen_text_subtitle">16sp</dimen>
+    <dimen name="dimen_text_appbar">20sp</dimen>
+    <dimen name="dimen_text_title">24sp</dimen>
+    <dimen name="dimen_text_super">34sp</dimen>
 </resources>

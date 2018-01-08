@@ -1,11 +1,15 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:icon">@color/colorIcons</item>
+        <item name="android:divider">@color/colorDivider</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,5 +20,15 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextHintStyle">
+        <item name="android:textSize">@dimen/dimen_text_hint</item>
+        <item name="android:textColor">@color/textWhiteColorHintOrDisable</item>
+    </style>
+
+    <style name="TextHintOverflowStyle">
+        <item name="android:textSize">@dimen/dimen_text_hint</item>
+        <item name="android:textColor">@color/colorErr</item>
+    </style>
 
 </resources>

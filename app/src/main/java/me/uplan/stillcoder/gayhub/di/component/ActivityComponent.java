@@ -7,7 +7,7 @@ import me.uplan.stillcoder.gayhub.di.annotation.PerActivity;
 import me.uplan.stillcoder.gayhub.di.module.ActivityModule;
 
 /**
- * Created by mac on 2018/1/6.
+ * Activity依赖提供和依赖需求的中间人，本身依赖于ApplicationComponent，以获取Application依赖
  */
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)

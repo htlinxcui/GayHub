@@ -1,4 +1,4 @@
-package me.uplan.stillcoder.library.ui;
+package me.uplan.stillcoder.library.ui.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,7 +24,7 @@ import me.uplan.stillcoder.library.presenter.IPresenterLifeCycle;
  * @todoDescript:
  */
 
-public abstract class BaseFragment extends RxFragment {
+public abstract class BaseFragment extends RxFragment implements IView {
 
     /**
      * presenter集合
@@ -47,7 +47,8 @@ public abstract class BaseFragment extends RxFragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable
+            Bundle savedInstanceState) {
         onPresenterLife(FragmentEvent.CREATE_VIEW);
         View parent = inflater.inflate(setContainerId(), container, false);
         unbinder = ButterKnife.bind(this, parent);
@@ -114,21 +115,31 @@ public abstract class BaseFragment extends RxFragment {
 
             switch (event) {
                 case CREATE:
-                    presenter.onCreate();
+                    presenter.onCreate(this, this);
+                    break;
                 case CREATE_VIEW:
                     presenter.onCreateView();
+                    break;
                 case START:
                     presenter.onStart();
+                    break;
                 case RESUME:
                     presenter.onResume();
+                    break;
                 case PAUSE:
                     presenter.onPause();
+                    break;
                 case STOP:
                     presenter.onStop();
+                    break;
                 case DESTROY_VIEW:
                     presenter.onDestroyView();
+                    break;
                 case DESTROY:
                     presenter.onDestroy();
+                    break;
+                default:
+                    break;
             }
         }
     }

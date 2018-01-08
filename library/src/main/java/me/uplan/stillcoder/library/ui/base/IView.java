@@ -1,4 +1,4 @@
-package me.uplan.stillcoder.library.ui;
+package me.uplan.stillcoder.library.ui.base;
 
 import me.uplan.stillcoder.library.presenter.IPresenterLifeCycle;
 

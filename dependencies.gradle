@@ -1,4 +1,4 @@
-def supportVersion = "26.0.2"
+def supportVersion = "27.0.2"
 def rxJavaVersion = "2.0.7"
 def rxAndroidVersion = "2.0.1"
 def rxBindingVersion = "2.0.0"

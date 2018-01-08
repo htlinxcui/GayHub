@@ -10,7 +10,7 @@ import me.uplan.stillcoder.gayhub.di.annotation.ApplicationContext;
 import me.uplan.stillcoder.gayhub.di.module.ApplicationModule;
 
 /**
- * Created by mac on 2018/1/6.
+ * Application依赖提供者和依赖需求者的中间人
  */
 
 @Singleton

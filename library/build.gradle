@@ -36,6 +36,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    compile 'com.github.d-max:spots-dialog:0.4@aar'
+
     implementation rootProject.ext.dependencies["support-v4"]
     implementation rootProject.ext.dependencies["appcompat-v7"]
 
@@ -52,14 +54,14 @@ dependencies {
     api rootProject.ext.dependencies["rxbinding-design"]
     api rootProject.ext.dependencies["rxbinding-recyclerview-v7"]
 
-    api rootProject.ext.dependencies["butterknife"]
-
     api rootProject.ext.dependencies["retrofit2"]
     api rootProject.ext.dependencies["adapter-rxjava"]
     api rootProject.ext.dependencies["retrofit2-converter-gson"]
     api rootProject.ext.dependencies["gson"]
     api rootProject.ext.dependencies["okhttp3"]
     api rootProject.ext.dependencies["okhttp3-logging-interceptor"]
+
+    api rootProject.ext.dependencies["butterknife"]
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

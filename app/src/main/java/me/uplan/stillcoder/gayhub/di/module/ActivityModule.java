@@ -9,29 +9,29 @@ import dagger.Provides;
 import me.uplan.stillcoder.gayhub.di.annotation.ActivityContext;
 
 /**
- * Created by mac on 2018/1/6.
+ * 提供Activity依赖
  */
 
 @Module
 public class ActivityModule {
     private Activity mActivity;
 
-    public ActivityModule(Activity activity){
-        mActivity=activity;
+    public ActivityModule(Activity activity) {
+        mActivity = activity;
     }
 
-    public ActivityModule(Fragment fragment){
-        mActivity=fragment.getActivity();
+    public ActivityModule(Fragment fragment) {
+        mActivity = fragment.getActivity();
     }
 
     @Provides
-    Activity provideActivity(){
+    Activity provideActivity() {
         return mActivity;
     }
 
     @ActivityContext
     @Provides
-    Context provideActivityContext(){
+    Context provideActivityContext() {
         return mActivity;
     }
 }

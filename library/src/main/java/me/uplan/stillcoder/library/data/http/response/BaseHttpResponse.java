@@ -9,7 +9,7 @@ package me.uplan.stillcoder.library.data.http.response;
 
 public class BaseHttpResponse<T> {
     private int code;
-    private String msg;
+    private String message;
     private T data;
 
     public int getCode() {
@@ -20,12 +20,12 @@ public class BaseHttpResponse<T> {
         this.code = code;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public T getData() {
@@ -44,7 +44,7 @@ public class BaseHttpResponse<T> {
     public String toString() {
         return "BaseHttpResponse{" +
                 "code=" + code +
-                ", msg='" + msg + '\'' +
+                ", msg='" + message + '\'' +
                 ", me.uplan.stillcoder.gayhub.data=" + data +
                 '}';
     }

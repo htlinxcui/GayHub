@@ -5,10 +5,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
 
 import me.uplan.stillcoder.gayhub.R;
-import me.uplan.stillcoder.library.ui.BaseActivity;
+import me.uplan.stillcoder.library.presenter.IPresenterLifeCycle;
+import me.uplan.stillcoder.library.ui.base.BaseActivity;
 
 public class ScrollingActivity extends BaseActivity {
 
@@ -31,5 +31,10 @@ public class ScrollingActivity extends BaseActivity {
     @Override
     protected int setContainerId() {
         return R.layout.activity_scrolling;
+    }
+
+    @Override
+    protected IPresenterLifeCycle[] gatherPresenters() {
+        return new IPresenterLifeCycle[0];
     }
 }

@@ -13,7 +13,6 @@ import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import me.uplan.stillcoder.library.rx.function.ErrorAdaptFunction;
-import me.uplan.stillcoder.library.rx.function.NegotiatedHandleFunction;
 import me.uplan.stillcoder.library.rx.observer.BaseObserver;
 
 /**
@@ -61,7 +60,7 @@ public class RxUtil {
                     observable = upstream;
                 }
 
-                return observable.map(new NegotiatedHandleFunction()).onErrorResumeNext(new
+                return observable./*map(new NegotiatedHandleFunction()).*/onErrorResumeNext(new
                         ErrorAdaptFunction<>()).subscribeOn(Schedulers.io()).observeOn
                         (AndroidSchedulers.mainThread());
             }
