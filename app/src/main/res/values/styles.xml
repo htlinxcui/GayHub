@@ -31,4 +31,35 @@
         <item name="android:textColor">@color/colorErr</item>
     </style>
 
+    <style name="CardViewStyle" parent="CardView.Light">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardBackgroundColor">@color/colorWhitePrimary</item>
+        <item name="cardElevation">@dimen/dimen_4</item>
+        <item name="contentPadding">@dimen/dimen_16</item>
+    </style>
+
+    <style name="TextLargeStyle" parent="TextAppearance.AppCompat.Large">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextMediumStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextBodyStyle" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextSmallStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen_1</item>
+        <item name="android:background">@color/colorDivider</item>
+        <item name="android:layout_marginTop">@dimen/dimen_8</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_8</item>
+    </style>
 </resources>

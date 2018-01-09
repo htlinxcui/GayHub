@@ -19,5 +19,8 @@
     <color name="textBlackColorHintOrDisable">#42000000</color>
     <color name="textBlackColorDivider">#1e0000</color>
 
+    <color name="colorWhitePrimary">#ffffffff</color>
+    <color name="colorWhiteSecondary">#1effffff</color>
+
     <color name="colorErr">#ff4081</color>
 </resources>
