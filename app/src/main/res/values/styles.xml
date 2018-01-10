@@ -39,6 +39,15 @@
         <item name="contentPadding">@dimen/dimen_16</item>
     </style>
 
+    <style name="CardViewNoRLPaddingStyle" parent="CardView.Light">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardBackgroundColor">@color/colorWhitePrimary</item>
+        <item name="cardElevation">@dimen/dimen_4</item>
+        <item name="contentPaddingTop">@dimen/dimen_16</item>
+        <item name="contentPaddingBottom">@dimen/dimen_16</item>
+    </style>
+
     <style name="TextLargeStyle" parent="TextAppearance.AppCompat.Large">
         <item name="android:gravity">center_vertical</item>
     </style>
